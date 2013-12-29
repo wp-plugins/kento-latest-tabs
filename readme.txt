@@ -42,7 +42,7 @@ Plugin Features
 
 
 == Screenshots ==
-screenshot-1.png
+
 1. Admin Settings.
 2. Popular post.
 3. Recent Post.
