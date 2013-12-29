@@ -1,0 +1,173 @@
+
+ul, li{ list-style: none !important;}
+
+#kento-highlight-widget{
+	border-bottom:0px none;
+	padding:8px 0px 4px;
+	width: 100%;	
+	min-width: 220px;
+}
+#kento-highlight-widget a{
+	text-decoration:none;
+}
+#kento-highlight-widget .widget-container{
+	clear:both;
+	padding:10px 0px;	
+}
+#kento-highlight-widget .widget-top{
+	height:30px;
+	margin:-10px 0px 10px;
+	padding:0px;
+}
+#kento-highlight-widget .widget-top{
+	border-bottom:0px none;
+	padding-bottom:5px;	
+}
+#kento-highlight-widget ul.tabs li{
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-color:transparent;
+	background-image:none;
+	background-origin:padding-box;
+	background-size:auto auto;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	float:left;
+	position:relative;
+	width:33%;
+	padding:0px;
+	line-height:30px;
+		
+}
+
+#kento-highlight-widget ul.tabs li:nth-child(2){
+	border-left:1px solid #666;
+	border-right:1px solid #666;
+	}
+
+
+#kento-highlight-widget .widget-container li{
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-color:transparent;
+	background-origin:padding-box;
+	background-position:left 8px;
+	background-repeat:no-repeat;
+	background-size:auto auto;
+	line-height:18px;
+	overflow:hidden;
+	padding:0px 0px 5px 12px;
+}
+#kento-highlight-widget ul.tabs li.active a{
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-color:#CD2122;
+	background-image:none;
+	background-repeat:repeat;
+	background-size:auto;
+	background-origin:padding-box;
+	font-family:Tahoma;
+}
+
+#kento-highlight-widget .active{
+	background-color:#CD2122;	
+}
+#kento-highlight-widget ul.tabs li a{
+	background-color:#2C2C2C;
+	color:#fff;
+	display:block;
+	line-height:30px;
+	padding:4px 0px;
+	text-align:center;
+	cursor: pointer;
+}
+#kento-highlight-widget ul.tabs li a:hover{
+	background-color:#4c4c4c;
+	text-decoration:none;
+}
+#kento-highlight-widget ul.tabs li.active:hover a{
+	background-color: #CD2122;	
+}
+#kento-highlight-widget .tabs-wrap{
+	padding-top:1px;
+	clear:both;	
+}
+
+#kento-highlight-widget #tab1 li a, #kento-highlight-widget #tab2 li a{
+  display: block;
+  max-height: 36px !important;
+  overflow: hidden;
+  font-weight: bold;
+}
+.clear{
+	clear:both;	
+}
+#kento-highlight-widget .tabs-wrap li:last-child, #kento-highlight-widget .tabs-wrap li {
+  background: none repeat scroll 0 0 ;
+  border-bottom: 1px solid #F2F2F2;
+  display: block;
+  height: 56px;
+  margin: 5px 0;
+  overflow: hidden;
+  padding: 0 0 4px;
+  cursor:pointer;
+}
+#kento-highlight-widget .tabs-wrap li:last-child:hover, #kento-highlight-widget .tabs-wrap li:hover {
+  background: none repeat scroll 0 0 #e7e7e7;
+
+}
+
+
+
+
+#kento-highlight-widget #tab3 li a{
+	max-height: 51px !important;
+	display: block !important;
+	width: 100%;
+	font-weight: normal !important;
+}
+
+#kento-highlight-widget .tabs-wrap li a{
+	color: #555 !important;
+}
+#kento-highlight-widget .widget-container .post-thumbnail, #kento-highlight-widget .footer-widget-container .post-thumbnail{
+	float:left;
+	margin:0px 5px 0px 0px;	
+}
+#kento-highlight-widget .post-thumbnail{
+	position:relative;
+	line-height:0px;
+	margin:0px 15px 10px 0px;	
+}
+#kento-highlight-widget .post-thumbnail img{
+	height:auto;
+	max-width:100%;
+	transition:all 0.4s ease 0s;	
+	border-radius: 0 !important;
+	box-shadow: none !important;
+}
+#kento-highlight-widget .widget-container h3{
+	font-size:inherit;	
+}
+#kento-highlight-widget .widget-container a:hover{
+	text-decoration:underline;	
+}
+
+#kento-highlight-widget .widget-container li span.date, 
+#kento-highlight-widget .footer-widget-container li span.date{
+	color:#aaa;
+	font-size:85%;
+	margin:5px 0px;
+}
+#kento-highlight-widget span.post-date{
+	background-image:url(images/separate.png);
+	padding-left:16px;
+	background-repeat:no-repeat;
+	background-position:left -504px;
+}
+#kento-highlight-widget .widget-container li .stars-small, 
+#kento-highlight-widget .footer-widget-container li .stars-small{
+	float;left;
+	margin:2px 5px 0px 0px;
+}
+
