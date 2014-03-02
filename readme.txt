@@ -17,6 +17,7 @@ jquery tabs to get list of latest, popular and recent comment with post thumbnai
 Live Preview: http://kentothemes.com/demo/kento-latest-tabs/
 
 Plugin Features
+
 * Thumbnail Image from featured image or post author.
 * jQuery Tabs.
 * Unlimited color.
