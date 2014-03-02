@@ -133,7 +133,10 @@ ul, li{ list-style: none !important;}
 #kento-highlight-widget .widget-container .post-thumbnail, #kento-highlight-widget .footer-widget-container .post-thumbnail{
 	float:left;
 	margin:0px 5px 0px 0px;	
+	height: 60px;
+	width: 60px;
 }
+
 #kento-highlight-widget .post-thumbnail{
 	position:relative;
 	line-height:0px;

@@ -3,12 +3,12 @@
 * Plugin Name: Kento Latest Tabs
 * Plugin URI: http://kentothemes.com
 * Description: Latest Update Popular Post, Reccent Post and Comments on post.
-* Version: 1.0
+* Version: 1.1
 * Author: KentoThemes
 * Author URI: http://kentothemes.com
-*License: GPLv2 or later
-*License URI: http://www.gnu.org/licenses/gpl-2.0.html
- */
+* License: GPLv2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
  
 define('KENTO_LATEST_TABS_PLUGIN_PATH', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );
 
@@ -55,6 +55,7 @@ class Kento_Latest_Tabs_Plugin extends WP_Widget {
         
      <?php $active_color = get_option( 'kento_latest_tabs_active' );
 			$hover_color = get_option( 'kento_latest_tabs_hover' );
+			$img_select = get_option( 'kento_latest_tabs_img' );
 	 
 				if ( ($active_color || $hover_color) || ($active_color && $hover_color)  ){?>
 					<style>
@@ -89,9 +90,44 @@ class Kento_Latest_Tabs_Plugin extends WP_Widget {
                                 <?php while( $hi_com_post->have_posts() ) : $hi_com_post->the_post(); ?>
 														
 									<li>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
 										<div class="post-thumbnail">
-											<?php echo get_avatar( get_the_author_email(), '60' );?>
+											<?php
+											if (isset($img_select)){
+											if (isset($img_select) && $img_select=='gravatar'){
+											
+											
+											 echo get_avatar( get_the_author_email(), '60' );
+											} else{ 
+												if(isset($img_select) && $img_select=='post-thumb' && has_post_thumbnail() ){
+											  the_post_thumbnail('thumbnail');
+												} else{ echo '<img src="' . plugins_url( 'css/images/images.png' , __FILE__ ) . '" > ';}
+											}
+											} else{
+												echo '<img src="' . plugins_url( 'css/images/images.png' , __FILE__ ) . '" > ';	
+											}
+											
+											?>
 										</div>
+                                       
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
 											<a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?>"><?php if ( get_the_title() ) the_title(); else the_ID(); ?></a>
 
 										<span class="date"><?php comments_number( 'no comments', 'one comment', '% comments' ); ?> &nbsp;
@@ -110,7 +146,22 @@ class Kento_Latest_Tabs_Plugin extends WP_Widget {
 									<?php  while ( $recent->have_posts() ) : $recent->the_post(); ?>
 									<li>
 										<div class="post-thumbnail">
-											<?php echo get_avatar( get_the_author_email(), '60' );?>
+											<?php
+											if (isset($img_select)){
+											if (isset($img_select) && $img_select=='gravatar'){
+											
+											
+											 echo get_avatar( get_the_author_email(), '60' );
+											} else{ 
+												if(isset($img_select) && $img_select=='post-thumb' && has_post_thumbnail() ){
+											  the_post_thumbnail('thumbnail');
+												} else{ echo '<img src="' . plugins_url( 'css/images/images.png' , __FILE__ ) . '" > ';}
+											}
+											} else{
+												echo '<img src="' . plugins_url( 'css/images/images.png' , __FILE__ ) . '" > ';	
+											}
+											
+											?>
 										</div>
 										
 											<a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ? get_the_title() : get_the_ID() ); ?>"><?php if ( get_the_title() ) the_title(); else the_ID(); ?></a>
@@ -195,6 +246,7 @@ function kh_settings_page(){
 function kento_latest_tabs_init(){
         register_setting( 'kento_highlight_plugin_options', 'kento_latest_tabs_active' );
 		register_setting( 'kento_highlight_plugin_options', 'kento_latest_tabs_hover' );
+		register_setting( 'kento_highlight_plugin_options', 'kento_latest_tabs_img' );
     }
 	
 add_action( 'admin_enqueue_scripts', 'enqueue_color_picker' );

@@ -1,10 +1,10 @@
 === Kento Latest Tabs ===
-Contributors: hasanrang05
+Contributors: hasanrang05, biplob53
 Donate link: 
-Tags: Latest post, latest comments, recent post, sidebar update post, jquery tabs, sidbar post tabs
+Tags: Latest post, latest comments, recent post, sidebar update post, jquery tabs, sidbar post tabs, popular posts, plugin, sidebar tabs
 Requires at least: 3.7
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ jquery tabs to get list of latest, popular and recent comment with post thumbnai
 Live Preview: http://kentothemes.com/demo/kento-latest-tabs/
 
 Plugin Features
-
+* Thumbnail Image from featured image or post author.
 * jQuery Tabs.
 * Unlimited color.
 * Unlimited hover color.
@@ -51,6 +51,9 @@ Plugin Features
 
 
 == Changelog ==
+
+= 1.1 =
+* Thumbnail Image From Post Authors or Post Featured Image.
 
 = 1.0 =
 * Initial release

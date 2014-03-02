@@ -8,6 +8,9 @@
 			
 			$hover_color = $_POST['kento_latest_tabs_hover'];
 			update_option('kento_latest_tabs_hover', $hover_color);
+			
+			$img_select = $_POST['kento_latest_tabs_img'];
+			update_option('kento_latest_tabs_img', $img_select);
 
 			?>
 			<div class="updated"><p><strong><?php _e('Changes Saved.' ); ?></strong></p></div>
@@ -16,6 +19,7 @@
 			//Normal page display
 			$active_color = get_option( 'kento_latest_tabs_active' );
 			$hover_color = get_option( 'kento_latest_tabs_hover' );
+			$img_select = get_option( 'kento_latest_tabs_img' );
 		}
 ?>
 		<div class="wrap">
@@ -36,7 +40,11 @@
                         <th scope="row"><label for="link_color"><?php echo __('Tab\'s  Hover Color '); ?>: </label></th>
                         <td style="vertical-align:middle;"><input name="kento_latest_tabs_hover" id="hover-color" type="text" value="<?php if ( isset( $hover_color ) ) echo $hover_color; ?>" /></td>
                     </tr>
-                </table>
+                    <tr valign="top">
+                        <th scope="row"><?php echo __('Display Thumbnails Image '); ?>:</th>
+                        <td style="vertical-align:middle;"><label for="kento_latest_tabs_img_gr"><input name="kento_latest_tabs_img" id="kento_latest_tabs_img_gr" type="radio" <?php if(isset($img_select) && $img_select=='gravatar') echo 'checked'; ?> value="gravatar" />Post Author </label><br /><label for="kento_latest_tabs_img_pt"><input name="kento_latest_tabs_img" id="kento_latest_tabs_img_pt" type="radio" <?php if(isset($img_select) && $img_select=='post-thumb') echo 'checked'; ?> value="post-thumb" />Post Thumbnails</label></td>
+                    </tr>
+                </table> 
                 <p class="submit">
                     <input class="button button-primary" type="submit" name="Submit" value="<?php _e('Save Changes' ) ?>" />
                 </p>
