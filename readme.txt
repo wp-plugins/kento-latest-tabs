@@ -1,5 +1,5 @@
 === Kento Latest Tabs ===
-Contributors: biplob53, hasanrang05
+Contributors: kentothemes
 Donate link: 
 Tags: Latest post, latest comments, recent post, sidebar update post, jquery tabs, sidebar post tabs, popular posts, plugin, sidebar tabs
 Requires at least: 3.7
